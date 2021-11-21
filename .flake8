@@ -1,0 +1,12 @@
+# this is the config file for FLAKE8
+[flake8]
+max-doc-length = 88
+ignore = D203, E302
+exclude =
+    # No need to traverse our git directory
+    .git,
+    # exlude this as well
+    .github,
+    # exlude readme.md
+    README.md,
+max-complexity = 10
