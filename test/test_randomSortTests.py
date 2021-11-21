@@ -1,8 +1,8 @@
 from numpy import random
-from int_sort import bubble
-from int_sort import quick
-from int_sort import partition
-from int_sort import insertion
+from sort_lib.int_sort import bubble
+from sort_lib.int_sort import quick
+from sort_lib.int_sort import partition
+from sort_lib.int_sort import insertion
 
 
 def test_bubble():

@@ -82,8 +82,8 @@ def quick(arr, low, high):
 
         # Separately sort elements before
         # partition and after partition
-        quickSort(arr, low, pi - 1)
-        quickSort(arr, pi + 1, high)
+        quick(arr, low, pi - 1)
+        quick(arr, pi + 1, high)
     return arr
 
 
