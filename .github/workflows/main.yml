@@ -11,7 +11,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-latest, windows-latest, ubuntu-18.04]
+        os: [ubuntu-latest]
         python-version: ['3.6','3.9']
     steps:
     - uses: actions/checkout@v2
@@ -78,7 +78,7 @@ jobs:
       run: |
         python -m build
         # see that the dist directory contains the wheel
-        ls -la dist
+        ls -l dist
     - name: Upload package
       if: github.event_name == 'push'
       uses: actions/upload-artifact@v2
