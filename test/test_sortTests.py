@@ -9,7 +9,6 @@
 # Imports the sort functions from the other Py files
 from sort_lib.int_sort import bubble
 from sort_lib.int_sort import quick
-from sort_lib.int_sort import partition
 from sort_lib.int_sort import insertion
 
 # PyTest to check if bubble sort works properly
