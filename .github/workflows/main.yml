@@ -37,7 +37,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-latest, windows-latest, ubuntu-18.04]
+        os: [macos-latest, windows-latest, ubuntu-latest]
         python-version: ['3.6','3.9']
     steps:
     - uses: actions/checkout@v2
@@ -60,7 +60,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-latest, windows-latest, ubuntu-18.04]
+        os: [macos-latest, windows-latest, ubuntu-latest]
         python-version: ['3.6','3.9']
     steps:
     - uses: actions/checkout@v2
