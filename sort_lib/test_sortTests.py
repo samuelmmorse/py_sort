@@ -7,16 +7,17 @@
 # of the same contents.
 
 # Imports the sort functions from the other Py files
-from BubbleSort import bubbleSort
-from InsertionSort import insertionSort
-from QuickSort import quickSort
+from int_sort import bubble
+from int_sort import quick
+from int_sort import partition
+from int_sort import insertion
 
 # PyTest to check if bubble sort works properly
-def test_bubbleSort():
+def test_bubble():
     # sets up array to be sorted
     arr = [7, 5, 1, 3, 4, 8, 2, 6]
     # sorts array
-    bubbleSort(arr)
+    bubble(arr)
     # correctly sorted array
     testarr = [1, 2, 3, 4, 5, 6, 7, 8]
     # checks if they are equal
@@ -24,11 +25,11 @@ def test_bubbleSort():
 
 
 # PyTest to check if insertion sort works properly
-def test_insertionSort():
+def test_insertion():
     # sets up array to be sorted
     arr = [7, 5, 1, 3, 4, 8, 2, 6]
     # sorts array
-    insertionSort(arr)
+    insertion(arr)
     # correctly sorted array
     testarr = [1, 2, 3, 4, 5, 6, 7, 8]
     # checks if they are equal
@@ -41,7 +42,7 @@ def test_quickSort():
     arr = [7, 5, 1, 3, 4, 8, 2, 6]
     # sorts array
     n = len(arr)
-    quickSort(arr, 0, n - 1)
+    quick(arr, 0, n - 1)
     # correctly sorted array
     testarr = [1, 2, 3, 4, 5, 6, 7, 8]
     # checks if they are equal

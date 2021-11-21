@@ -1,31 +1,32 @@
 from numpy import random
-from BubbleSort import bubbleSort
-from InsertionSort import insertionSort
-from QuickSort import quickSort
+from int_sort import bubble
+from int_sort import quick
+from int_sort import partition
+from int_sort import insertion
 
 
-def test_bubbleSort():
+def test_bubble():
     n = random.randint(100)
     i = random.randint(2147483646, size=(n))
-    a = bubbleSort(i)
+    a = bubble(i)
     for k in range(len(i) - 1):
         print(f"Given: {i}")
         assert a[k] <= a[k + 1]
 
 
-def test_insertionSort():
+def test_insertion():
     n = random.randint(100)
     i = random.randint(2147483646, size=(n))
-    a = insertionSort(i)
+    a = insertion(i)
     for k in range(len(i) - 1):
         print(f"Given: {i}")
         assert a[k] <= a[k + 1]
 
 
-def test_quickSort():
+def test_quick():
     n = random.randint(100)
     i = random.randint(2147483646, size=(n))
-    a = quickSort(i, 0, len(i) - 1)
+    a = quick(i, 0, len(i) - 1)
     for k in range(len(i) - 1):
         print(f"Given: {i}")
         assert a[k] <= a[k + 1]
