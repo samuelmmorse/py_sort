@@ -8,7 +8,11 @@ on:
       
 jobs:
   linting:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-18.04]
+        python-version: ['3.6','3.9']
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.8
@@ -30,10 +34,11 @@ jobs:
   test:
     # only run the code testing if linting passed
     needs: linting
+    runs-on: ${{ matrix.os }}
     strategy:
-	  matrix:
-        python-version: [3.6, 3.9]
-    runs-on: ubuntu-latest
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-18.04]
+        python-version: ['3.6','3.9']
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
@@ -52,10 +57,11 @@ jobs:
   packaging:
     # only run the packaging if testing passed
     needs: test
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        python-version: [3.6, 3.9]
-    runs-on: ubuntu-latest
+        os: [macos-latest, windows-latest, ubuntu-18.04]
+        python-version: ['3.6','3.9']
     steps:
     - uses: actions/checkout@v2
       with:
