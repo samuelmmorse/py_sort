@@ -16,24 +16,27 @@
 #
 # =========================================================================
 
-'''
+"""
 This module sorts lists of integers...
-'''
+"""
+
 
 def bubble(int_list):
-  '''
+    """
   bubble docstring
-  '''
-  pass
-  
+  """
+    pass
+
+
 def quick(int_list):
-  '''
+    """
   qsort docstring
-  '''
-  pass
-  
+  """
+    pass
+
+
 def insertion(int_list):
-  '''
+    """
   insertion docstring
-  '''
-  pass
+  """
+    pass
